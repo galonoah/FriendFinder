@@ -1,0 +1,19 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galoelmer/FriendFinder.git"
+  },
+  "author": "Elmer C. Galo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galoelmer/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/galoelmer/FriendFinder#readme"
+}

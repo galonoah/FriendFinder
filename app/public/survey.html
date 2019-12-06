@@ -219,7 +219,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 		<script>
 			$(".selection.dropdown").dropdown();
-			// Submit users survey data
+			// Store users survey data in usersData variable and post it to server to find a match friend
 			$(".submit.button").click(function(event) {
 				event.preventDefault();
 				var userData = {
@@ -239,7 +239,11 @@
 					]
 				};
 
-				$.post("/api/friends", userData);
+				$.post("/api/friends", userData).then(function(data){
+					console.log(data);
+					// USE DATA TO CREATE MODAL WITH MATCH FRIEND DATA
+					// THEN REDIRECT TO HOME PAGE
+				});
 			});
 		</script>
 	</body>

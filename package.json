@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/galoelmer/FriendFinder/issues"
   },
-  "homepage": "https://github.com/galoelmer/FriendFinder#readme"
+  "homepage": "https://github.com/galoelmer/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
 }

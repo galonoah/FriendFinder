@@ -15,11 +15,11 @@
 				<h2 class="ui header">About You</h2>
 				<div class="field">
 					<label>Full Name</label>
-					<input type="text" placeholder="Full Name" />
+					<input id="userName" type="text" placeholder="Full Name" />
 				</div>
 				<div class="field">
 					<label>Image URL</label>
-					<input type="text" placeholder="Image URL" />
+					<input id="userImageUrl" type="text" placeholder="Image URL" />
 				</div>
 				<div class="ui divider"></div>
 				<!--=======  SURVEY QUESTIONS  ========-->
@@ -219,6 +219,28 @@
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 		<script>
 			$(".selection.dropdown").dropdown();
+			// Submit users survey data
+			$(".submit.button").click(function(event) {
+				event.preventDefault();
+				var userData = {
+					name: $("#userName").val(),
+					photo: $("#userImageUrl").val(),
+					scores: [
+						$("#question_1").val(),
+						$("#question_2").val(),
+						$("#question_3").val(),
+						$("#question_4").val(),
+						$("#question_5").val(),
+						$("#question_6").val(),
+						$("#question_7").val(),
+						$("#question_8").val(),
+						$("#question_9").val(),
+						$("#question_10").val()
+					]
+				};
+
+				$.post("/api/friends", userData);
+			});
 		</script>
 	</body>
 </html>

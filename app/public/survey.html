@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Friend Finder</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+	</head>
+	<body>
+		<div class="ui container">
+			<h1 class="ui center aligned huge header">Survey Questions</h1>
+			<div class="ui stacked segment form">
+				<!--=======  ABOUT ME FORM  ========-->
+				<h2 class="ui header">About You</h2>
+				<div class="field">
+					<label>Full Name</label>
+					<input type="text" placeholder="Full Name" />
+				</div>
+				<div class="field">
+					<label>Image URL</label>
+					<input type="text" placeholder="Image URL" />
+				</div>
+				<div class="ui divider"></div>
+				<!--=======  SURVEY QUESTIONS  ========-->
+				<div class="field">
+					<h2 class="ui grey header">Question 1</h2>
+					<label>
+						<h3>I believe that there is no absolute right and wrong.</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_1" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">Select an option</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<h2 class="ui grey header">Question 2</h2>
+					<label>
+						<h3>I want everything to be "just right."</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_2" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">Select an option</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<h2 class="ui grey header">Question 3</h2>
+					<label>
+						<h3>I see myself as conventional, uncreative.</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_3" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">Select an option</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<h2 class="ui grey header">Question 4</h2>
+					<label>
+						<h3>I like to solve complex problems.</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_4" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">Select an option</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<h2 class="ui grey header">Question 5</h2>
+					<label>
+						<h3>I like order.</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_5" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">Select an option</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<h2 class="ui grey header">Question 6</h2>
+					<label>
+						<h3>I try to follow the rules.</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_6" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">I like to solve complex problems..</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field">
+					<h2 class="ui grey header">Question 7</h2>
+					<label>
+						<h3>I get stressed out easily.</h3>
+					</label>
+					<div class="ui selection dropdown">
+						<input type="hidden" id="question_7" value="" />
+						<i class="dropdown icon"></i>
+						<div class="default text">I like to solve complex problems..</div>
+						<div class="menu">
+							<div class="item" data-value="1">1 &#40;Strongly Disagree&#41;</div>
+							<div class="item" data-value="2">2</div>
+							<div class="item" data-value="3">3</div>
+							<div class="item" data-value="4">4</div>
+							<div class="item" data-value="5">5 &#40;Strongly Agree&#41;</div>
+						</div>
+					</div>
+				</div>
+				<div class="fluid ui primary submit button">Submit</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script>
+			$(".selection.dropdown").dropdown();
+		</script>
+	</body>
+</html>

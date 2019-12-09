@@ -15,11 +15,13 @@
 				<h2 class="ui header">About You</h2>
 				<div class="field">
 					<label>Full Name</label>
-					<input id="userName" type="text" placeholder="Full Name" />
+					<input id="userName" type="text" placeholder="Full Name" name="userName" />
+					<div class="prompt"></div>
 				</div>
 				<div class="field">
 					<label>Image URL</label>
-					<input id="userImageUrl" type="text" placeholder="Image URL" />
+					<input id="userImageUrl" type="text" placeholder="Image URL" name="userImageUrl" />
+					<div class="prompt"></div>
 				</div>
 				<div class="ui divider"></div>
 				<!--=======  SURVEY QUESTIONS  ========-->
@@ -29,7 +31,8 @@
 						<h3>I believe that there is no absolute right and wrong.</h3>
 					</label>
 					<div class="ui selection dropdown">
-						<input type="hidden" id="question_1" value="" />
+						<input type="hidden" id="question_1" value="" name="questionValue" />
+						<div class="prompt"></div>
 						<i class="dropdown icon"></i>
 						<div class="default text">Select an option</div>
 						<div class="menu">
@@ -214,6 +217,19 @@
 				</div>
 				<div class="fluid ui primary submit button">Submit</div>
 			</div>
+
+			<div class="ui mini modal">
+				<i class="close icon" id="closeIcon"></i>
+				<div class="header">Best Match</div>
+				<div class="image content">
+					<div class="ui medium image">
+						<img id="friendImgUrl" src="" />
+					</div>
+				</div>
+				<div class="content">
+					<h3 id="friendName" class="ui center aligned header"></h3>
+				</div>
+			</div>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
@@ -239,10 +255,22 @@
 					]
 				};
 
-				$.post("/api/friends", userData).then(function(data){
+				$.post("/api/friends", userData).then(function(data) {
 					console.log(data);
-					// USE DATA TO CREATE MODAL WITH MATCH FRIEND DATA
-					// THEN REDIRECT TO HOME PAGE
+					$(".form").form("clear");
+					$("#friendName").text(data.name);
+					$("#friendImgUrl").attr("src", data.photo);
+
+					// Modal will show name and picture of matching friend
+					$(".ui.mini.modal")
+						.modal("setting", "closable", false)
+						.modal("setting", "transition", "horizontal flip")
+						.modal("show");
+
+				   // Closing modal will redirect to home page
+					$("#closeIcon").click(function() {
+						window.location.replace("/");
+					});
 				});
 			});
 		</script>

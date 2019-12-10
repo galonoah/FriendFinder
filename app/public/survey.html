@@ -6,6 +6,15 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Friend Finder</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+		<style type="text/css">
+			body {
+				background-color: #dadada;
+			}
+			.ui.stacked.segment.form {
+				max-width: 768px;
+				margin: 0 auto;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="ui container">
@@ -236,7 +245,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 		<script src="/validate.js"></script>
 		<script>
-
 			$(".selection.dropdown").dropdown();
 			// Store users survey data in usersData variable and post it to server to find a match friend
 			$(".submit.button").click(function(event) {
